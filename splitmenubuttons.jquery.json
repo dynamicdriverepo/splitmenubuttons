@@ -1,0 +1,25 @@
+{
+  "name": "splitmenubuttons",
+  "title": "Split Menu Buttons",
+  "description": "Split Menu Buttons combine the sleek aesthetics of menu buttons with the versatility of drop down menus to create a navigational interface that captures the best of both worlds. It renders attractive CSS based oval buttons with an optional \"toggle\" element dynamically added next to it that reveals a drop down menu when interacted with. The drop down menu is simply a regular UL list you define on the page, and can be multi levelled.",
+  "keywords": ["menu", "dropdown", "bar", "navigation", "ul"],
+  "version": "1.2.0",
+  "author": {
+    "name": "Dynamic Drive",
+    "email" : "ddrivehelp@gmail.com",
+		"url": "http://www.dynamicdrive.com"
+  },
+  "licenses": [
+    {
+      "type": "Freeware",
+      "url": "http://www.dynamicdrive.com/notice.htm"
+    }
+  ],
+  "dependencies": {
+    "jquery": ">=1.7"
+  },
+  "homepage": "http://www.dynamicdrive.com/dynamicindex1/splitmenubuttons.htm",
+  "docs": "http://www.dynamicdrive.com/dynamicindex1/splitmenubuttons.htm",
+  "demo": "http://www.dynamicdrive.com/dynamicindex1/splitmenubuttons.htm",
+  "download": "http://www.dynamicdrive.com/dynamicindex1/splitmenubuttons.htm"
+}

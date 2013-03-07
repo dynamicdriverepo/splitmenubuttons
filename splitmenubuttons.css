@@ -1,0 +1,101 @@
+.splitmenubutton, .downtoggler{ /* .downtoggler element is dynamically added by script */
+color: white;
+font: bold 13px Arial;
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+border-radius: 5px;
+text-decoration: none;
+background: darkred; /* default color of menu button */
+display: inline-block;
+}
+
+.splitmenubutton span.innerspan, .downtoggler span.innerspan{ /* span.innerspan element dynamically added by script inside menu button */
+display: block;
+padding: 8px;
+line-height: 1em;
+/* the following CSS3 gradients add a white to transparent linear gradient to the buttons, to give them a more beveled look */
+background: -moz-linear-gradient(top,  rgba(255,252,252,0.54) 0%, rgba(255,255,255,0) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,252,252,0.54)), color-stop(100%,rgba(255,255,255,0))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  rgba(255,252,252,0.54) 0%,rgba(255,255,255,0) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  rgba(255,252,252,0.54) 0%,rgba(255,255,255,0) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  rgba(255,252,252,0.54) 0%,rgba(255,255,255,0) 100%); /* IE10+ */
+background: linear-gradient(to bottom,  rgba(255,252,252,0.54) 0%,rgba(255,255,255,0) 100%); /* W3C */
+}
+
+.dedicatedtoggler{ /* CSS to apply to toggler when it's a seperate element (instead of being the main menu button itself) */
+-moz-border-radius: 0 5px 5px 0;
+border-radius: 0 5px 5px 0;
+border-left: 1px solid #f5f5f5;
+}
+
+a.downtoggler.selected{ /* CSS to add to toggler element when it's selected */
+background: #b13f33; /* default hover background color of menu */
+}
+
+.downarrow, rightarrow{
+cursor: pointer;
+}
+
+span.innerspan.downarrow::after{ /* Down arrow (hex value) */
+content: '\25be';
+}
+
+.splitmenubutton span.innerspan.downarrow:after{ /* Down arrow with space before the arrow */
+content: '\00a0\25be';
+}
+
+
+.rightarrow:after{ /* CSS for right arrow inside splitdropdown */
+content: '\25b8'; /* Add HTML entity based right arrow */
+position: absolute;
+right: 5px;
+font-size: 16px;
+height: 100%;
+}
+
+/* ##### CSS for UL Drop Down Menus of script ###### */
+
+
+ul.splitdropdown, ul.splitdropdown ul{ /*topmost and sub ULs, respectively*/
+font: normal 13px Verdana;
+margin: 0;
+padding: 0;
+position: absolute;
+display: none;
+left: 200px;
+top: 0;
+list-style: none;
+background: white; /* background color of drop down */
+border: 1px solid lightgray;
+border-bottom-width: 0;
+box-shadow: 0 0 8px #818181; /*shadow for CSS3 capable browsers.*/
+-webkit-box-shadow: 0 0 8px #818181;
+-moz-box-shadow: 0 0 8px #818181;
+}
+
+
+ul.splitdropdown li{
+position: relative;
+}
+
+ul.splitdropdown li a{
+display: block;
+width: 160px; /*width of menu (not including side paddings)*/
+color: black;
+background: white;
+text-decoration: none;
+padding: 8px 4px;
+}
+
+* html ul.splitdropdown li{ /*IE6 CSS hack*/
+display: inline-block;
+width: 170px; /*width of menu (include side paddings of LI A*/
+}
+
+ul.splitdropdown li a:hover, .splitdropdown li.selected>a{
+background: #eee;
+}
+
+ul.splitdropdown li.separator{
+border-bottom: 1px solid #dedddd;
+}

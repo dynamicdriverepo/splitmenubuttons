@@ -1,0 +1,83 @@
+<!doctype html>
+<head>
+
+<link rel="stylesheet" type="text/css" href="splitmenubuttons.css" />
+
+<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js'></script>
+
+<script src="splitmenubuttons.js">
+
+/* Split Menu Buttons: created: Aug 8th, 2012 by DynamicDrive.com. This notice must stay intact for usage 
+*  Author: Dynamic Drive at http://www.dynamicdrive.com/
+*  Visit http://www.dynamicdrive.com/ for full source code
+*/
+
+</script>
+
+<script>
+
+jQuery(function(){ // on document load
+	$('a[data-showmenu]').splitmenubuttonMenu() // Add split button menu to links with "data-showmenu" attr
+})
+
+</script>
+
+</head>
+
+<body>
+
+	<!-- Sample Menu buttons markup -->
+	<a href="#" class="splitmenubutton" data-showmenu="dropmenu1" data-splitmenu="false">Dynamic Drive</a>
+	
+	<a href="#" data-showmenu="dropmenu2" class="splitmenubutton">Web Design</a>  
+	
+	<div style="text-align:center"><a href="#" data-showmenu="dropmenu2" data-menucolors="navy,blue" class="splitmenubutton">Web Graphics</a></div>
+	
+	
+	<!-- Sample corresponding Drop Down Menus markup -->
+	
+	<!-- Drop Down #1 -->
+	
+	<ul id="dropmenu1" class="splitdropdown">
+	<li><a href="http://www.dynamicdrive.com/new.htm">What's New</a></li>
+	<li><a href="http://www.dynamicdrive.com/revised.htm">Revised</a></li>
+	<li><a href="http://www.dynamicdrive.com/forums/">DD Forums</a></li>
+	<li><a href="http://www.dynamicdrive.com/style/">CSS Library</a></li>
+	<li><a href="http://tools.dynamicdrive.com/imageoptimizer/">Image Optimizer</a></li>
+	<li><a href="http://tools.dynamicdrive.com/gradient/">Gradient Image Maker</a></li>
+	<li><a href="http://tools.dynamicdrive.com/favicon/">FavIcon Generator</a></li>
+	</ul>
+	
+	<!-- Drop Down #2 -->
+	
+	<ul id="dropmenu2" class="splitdropdown">
+	<li><a href="#">Item 1a</a></li>
+	<li class="separator"><a href="#">Item 2a</a></li>
+	<li><a href="#">Item Folder 3a</a>
+	<ul>
+	<li><a href="#">Sub Item 3.1a</a></li>
+	<li><a href="#">Sub Item 3.2a</a></li>
+	<li><a href="#">Sub Item 3.3a</a></li>
+	<li><a href="#">Sub Item 3.4a</a></li>
+	</ul>
+	</li>
+	<li><a href="#">Item 4a</a></li>
+	<li><a href="#">Item Folder 5a</a>
+	<ul>
+	<li><a href="#">Sub Item 5.1a</a></li>
+	<li><a href="#">Item Folder 5.2a</a>
+	<ul>
+	<li><a href="#">Sub Item 5.2.1a</a></li>
+	<li><a href="#">Sub Item 5.2.2a</a></li>
+	<li><a href="#">Sub Item 5.2.3a</a></li>
+	<li><a href="#">Sub Item 5.2.4a</a></li>
+	</ul>
+	</li>
+	</ul>
+	</li>
+	<li><a href="#">Item 6a</a></li>
+	</ul>
+
+</body>
+
+</html>
